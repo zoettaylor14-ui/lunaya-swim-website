@@ -7,8 +7,8 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-end overflow-hidden sm:min-h-[95vh]">
       <Image
-        src="/lunaya/backgrounds/hero-placeholder.jpg"
-        alt="Moonlit beach, crystal swimwear"
+        src="/lunaya/backgrounds/hero-golden-hour.png"
+        alt="Golden hour ocean, crystal swimwear mood"
         fill
         priority
         className="object-cover"

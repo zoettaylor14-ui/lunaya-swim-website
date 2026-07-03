@@ -30,12 +30,12 @@ export const instagram = {
 export const pinterest = {
   boardUrl: process.env.NEXT_PUBLIC_PINTEREST_BOARD_URL || "https://pin.it/43ne08NLd",
   fallbackCards: [
-    { label: "Crystal Details", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
+    { label: "Crystal Details", image: "/lunaya/crystals/crystal-detail-closeup.png" },
     { label: "Moonlit Beach", image: "/lunaya/moodboard/moonlit-beach-placeholder.jpg" },
     { label: "Goddess Swim", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
     { label: "Zodiac Energy", image: "/lunaya/moodboard/moonlit-beach-placeholder.jpg" },
-    { label: "Golden Hour", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
-    { label: "Custom Sparkle", image: "/lunaya/moodboard/moonlit-beach-placeholder.jpg" },
+    { label: "Golden Hour", image: "/lunaya/moodboard/shoreline-walk-ai.png" },
+    { label: "Custom Sparkle", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
   ],
 };
 

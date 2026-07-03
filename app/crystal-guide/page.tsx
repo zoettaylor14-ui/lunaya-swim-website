@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { crystals } from "@/lib/data/crystals";
 import { CrystalCard } from "@/components/CrystalCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,6 +12,16 @@ export const metadata: Metadata = {
 export default function CrystalGuidePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div className="relative mb-12 aspect-[21/9] w-full overflow-hidden rounded-3xl glass-card">
+        <Image
+          src="/lunaya/crystals/crystal-detail-closeup.png"
+          alt="Hand-placed crystal detail, close up"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight/70 via-transparent to-transparent" />
+      </div>
       <SectionHeading
         eyebrow="Crystal Guide"
         title="Crystal Energy Guide"
