@@ -37,9 +37,9 @@ export default async function ShadePage({ params }: { params: Promise<{ slug: st
   const related = getRelatedShades(slug, 3);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <div className="grid gap-10 md:grid-cols-2">
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl glass-card">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-none glass-card">
           <Image src={shade.image} alt={shade.name} fill className="object-cover" priority />
           <Badge tone="gold" className="absolute left-4 top-4">
             Coming Soon
@@ -79,7 +79,7 @@ export default async function ShadePage({ params }: { params: Promise<{ slug: st
         <h2 className="font-display text-xl text-gold">Moodboard</h2>
         <div className="mt-5 grid grid-cols-2 gap-4 sm:max-w-lg">
           {shade.moodImages.map((img) => (
-            <div key={img} className="relative aspect-square overflow-hidden rounded-2xl glass-card">
+            <div key={img} className="relative aspect-square overflow-hidden rounded-none glass-card">
               <Image src={img} alt={`${shade.name} mood`} fill className="object-cover" />
             </div>
           ))}

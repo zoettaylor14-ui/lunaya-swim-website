@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function WaitlistPage() {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
       <SectionHeading
         eyebrow="Early Access"
         title="Be First to Enter the Lunaya World"

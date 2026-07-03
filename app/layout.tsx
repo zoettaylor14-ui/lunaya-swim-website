@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileStickyNav } from "@/components/MobileStickyNav";
+import { WelcomePopup } from "@/components/WelcomePopup";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="relative z-10 flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
         <MobileStickyNav />
+        <WelcomePopup />
       </body>
     </html>
   );

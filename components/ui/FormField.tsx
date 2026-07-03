@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 const fieldClass =
-  "w-full rounded-xl border border-pearl/15 bg-pearl/5 px-4 py-3 text-sm text-pearl placeholder:text-pearl/35 outline-none transition-colors focus:border-gold/50";
+  "w-full rounded-none border border-pearl/15 bg-pearl/5 px-4 py-3 text-sm text-pearl placeholder:text-pearl/35 outline-none transition-colors focus:border-gold/50";
 
 export function Label({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
@@ -47,7 +47,7 @@ export function ChipGroup({
           key={opt}
           onClick={() => onChange(opt)}
           className={cn(
-            "rounded-full border px-3.5 py-1.5 text-xs transition-colors",
+            "rounded-none border px-3.5 py-1.5 text-xs transition-colors",
             value === opt ? "border-gold bg-gold/10 text-gold" : "border-pearl/15 text-pearl/70 hover:border-gold/40"
           )}
         >

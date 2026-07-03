@@ -6,7 +6,7 @@ import { GlowButton } from "@/components/ui/GlowButton";
 
 export function ShadeCard({ shade }: { shade: ShadeStory }) {
   return (
-    <div className="group glass-card flex flex-col overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1">
+    <div className="group glass-card flex flex-col overflow-hidden rounded-none transition-transform duration-300 hover:-translate-y-1">
       <Link href={`/color-stories/${shade.slug}`} className="relative block aspect-[4/5] w-full overflow-hidden">
         <Image
           src={shade.image}

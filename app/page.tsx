@@ -17,7 +17,7 @@ export default function Home() {
       <FirstDropSection />
       <CustomAccessTeaser />
       <InstagramShowcase />
-      <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <SectionHeading
           eyebrow="Early Access"
           title="Be First to Enter the Lunaya World"

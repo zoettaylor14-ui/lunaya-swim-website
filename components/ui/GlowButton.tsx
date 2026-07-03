@@ -27,7 +27,7 @@ export function GlowButton({
   type?: "button" | "submit";
 }) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300",
+    "inline-flex items-center justify-center gap-2 rounded-none px-5 py-2.5 text-xs font-medium tracking-wide transition-all duration-300",
     variants[variant],
     className
   );

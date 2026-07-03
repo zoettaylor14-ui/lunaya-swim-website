@@ -46,7 +46,7 @@ export default function DropPage() {
         cta={false}
       />
 
-      <section className="bg-[#07120d] px-4 py-20 sm:px-6">
+      <section className="bg-[#07120d] px-4 py-14 sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="font-display text-3xl leading-tight text-pearl sm:text-4xl">
@@ -61,7 +61,7 @@ export default function DropPage() {
               <GlowButton href="/waitlist">Get on the List</GlowButton>
             </div>
           </div>
-          <div className="relative aspect-[16/9] overflow-hidden rounded-3xl glass-card">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-none glass-card">
             <Image src="/lunaya/moodboard/flatlay.jpg" alt="Lunaya first drop concept flatlay" fill className="object-cover" />
           </div>
         </div>

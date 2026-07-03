@@ -14,7 +14,7 @@ export function InstagramShowcase() {
   const hasRealPosts = instagram.postUrls.length > 0;
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
       <SectionHeading
         eyebrow={`@${instagram.handle}`}
         title="The Lunaya World"
@@ -37,7 +37,7 @@ export function InstagramShowcase() {
               href={instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-2xl glass-card"
+              className="group relative aspect-square overflow-hidden rounded-none glass-card"
             >
               <Image
                 src={post.image}

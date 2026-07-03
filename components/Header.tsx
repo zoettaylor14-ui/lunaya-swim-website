@@ -58,7 +58,7 @@ export function Header() {
             </a>
             <Link
               href="/waitlist"
-              className="hidden rounded-full bg-gradient-to-r from-gold to-peach px-4 py-2 text-xs font-medium text-midnight transition hover:brightness-110 md:inline-flex"
+              className="hidden rounded-none bg-gradient-to-r from-gold to-peach px-4 py-2 text-xs font-medium text-midnight transition hover:brightness-110 md:inline-flex"
             >
               Join the Waitlist
             </Link>
@@ -123,7 +123,7 @@ export function Header() {
             <Link
               href="/waitlist"
               onClick={() => setMobileOpen(false)}
-              className="block w-full rounded-full bg-gradient-to-r from-gold to-peach px-4 py-3 text-center text-sm font-medium text-midnight"
+              className="block w-full rounded-none bg-gradient-to-r from-gold to-peach px-4 py-3 text-center text-sm font-medium text-midnight"
             >
               Join the Waitlist
             </Link>

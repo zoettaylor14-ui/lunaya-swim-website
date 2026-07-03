@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function MoodboardPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-12">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <SectionHeading
           eyebrow="The Brand World"

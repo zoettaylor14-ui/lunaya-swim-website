@@ -19,7 +19,7 @@ const steps = [
 
 export default function CustomAccessPage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <SectionHeading
         eyebrow="Limited Early Interest"
         title="Want a custom crystal bikini first?"
@@ -28,8 +28,8 @@ export default function CustomAccessPage() {
 
       <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-5">
         {steps.map((step, i) => (
-          <div key={step.title} className="glass-card rounded-2xl p-4 text-center">
-            <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 text-gold">
+          <div key={step.title} className="glass-card rounded-none p-4 text-center">
+            <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-none bg-gold/10 text-gold">
               <step.icon size={18} strokeWidth={1.5} />
             </div>
             <p className="text-[11px] text-gold/70">Step {i + 1}</p>

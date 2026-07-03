@@ -35,7 +35,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="glass-card rounded-3xl p-8 text-center sm:p-12">
+      <div className="glass-card rounded-none p-8 text-center sm:p-12">
         <Sparkles className="mx-auto mb-4 text-gold" size={28} />
         <h3 className="font-display text-2xl text-pearl">Message sent.</h3>
         <p className="mt-2 text-sm text-pearl/60">Zoe + Lilly will get back to you soon.</p>
@@ -44,7 +44,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="glass-card space-y-5 rounded-3xl p-6 sm:p-10">
+    <form onSubmit={onSubmit} className="glass-card space-y-5 rounded-none p-5 sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <Label required>Name</Label>

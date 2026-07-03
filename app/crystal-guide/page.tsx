@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function CrystalGuidePage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <div className="relative mb-12 aspect-[21/9] w-full overflow-hidden rounded-3xl glass-card">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <div className="relative mb-12 aspect-[21/9] w-full overflow-hidden rounded-none glass-card">
         <Image
           src="/lunaya/crystals/crystal-detail-closeup.png"
           alt="Hand-placed crystal detail, close up"

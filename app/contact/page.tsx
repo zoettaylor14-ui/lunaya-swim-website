@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
       <SectionHeading eyebrow="Contact" title="Get in Touch" subtitle="Custom access, waitlist questions, press, collabs — we read every message." />
       <div className="mt-12">
         <ContactForm />

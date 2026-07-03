@@ -20,7 +20,7 @@ const careSteps = [
 
 export default function CareGuidePage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <SectionHeading
         eyebrow="Care Guide"
         title="How to Care for Your Crystal Bikini"
@@ -29,8 +29,8 @@ export default function CareGuidePage() {
 
       <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {careSteps.map((step) => (
-          <div key={step.title} className="glass-card rounded-2xl p-5">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 text-gold">
+          <div key={step.title} className="glass-card rounded-none p-5">
+            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-none bg-gold/10 text-gold">
               <step.icon size={18} strokeWidth={1.5} />
             </div>
             <p className="font-display text-base text-pearl">{step.title}</p>
@@ -39,7 +39,7 @@ export default function CareGuidePage() {
         ))}
       </div>
 
-      <div className="mt-16 glass-card rounded-2xl p-6 text-center">
+      <div className="mt-16 glass-card rounded-none p-6 text-center">
         <h2 className="font-display text-xl text-gold">Shipping &amp; Returns</h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-pearl/70">
           Full shipping, timing, and return details will be announced when Drop 001 launches. Join the{" "}

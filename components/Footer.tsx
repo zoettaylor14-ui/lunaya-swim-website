@@ -65,7 +65,7 @@ export function Footer() {
             <p className="mb-2 text-xs text-pearl/50">Get first access when we launch.</p>
             <Link
               href="/waitlist"
-              className="inline-block rounded-full border border-gold/40 px-4 py-2 text-xs text-gold hover:bg-gold/10"
+              className="inline-block rounded-none border border-gold/40 px-4 py-2 text-xs text-gold hover:bg-gold/10"
             >
               Join the Waitlist
             </Link>

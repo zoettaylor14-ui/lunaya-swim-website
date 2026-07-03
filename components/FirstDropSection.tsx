@@ -4,8 +4,8 @@ import { GlowButton } from "@/components/ui/GlowButton";
 
 export function FirstDropSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-      <div className="glass-card grid gap-8 overflow-hidden rounded-3xl p-6 sm:p-10 md:grid-cols-2 md:items-center">
+    <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <div className="glass-card grid gap-8 overflow-hidden rounded-none p-5 sm:p-8 md:grid-cols-2 md:items-center">
         <div>
           <Badge tone="blush">Coming Soon</Badge>
           <h2 className="mt-4 font-display text-3xl text-pearl sm:text-4xl">
@@ -21,7 +21,7 @@ export function FirstDropSection() {
             <GlowButton href="/waitlist">Get Early Access</GlowButton>
           </div>
         </div>
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-none">
           <Image src="/lunaya/moodboard/flatlay.jpg" alt="Lunaya first drop concept flatlay" fill className="object-cover" />
         </div>
       </div>

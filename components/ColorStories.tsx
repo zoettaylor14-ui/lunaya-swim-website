@@ -15,7 +15,7 @@ export function ColorStories({
   cta?: boolean;
 }) {
   return (
-    <section id="colors" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
+    <section id="colors" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 sm:px-6">
       <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
         {colorStories.map((shade) => (

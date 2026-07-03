@@ -5,7 +5,7 @@ const badges = ["Crystal Details Coming Soon", "Brazilian-Inspired Cuts", "Zodia
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-end overflow-hidden sm:min-h-[95vh]">
+    <section className="relative flex min-h-[68vh] items-end overflow-hidden sm:min-h-[74vh]">
       <Image
         src="/lunaya/backgrounds/hero.jpg"
         alt="Golden hour ocean, crystal swimwear mood"
@@ -17,19 +17,19 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-plum/40 via-transparent to-navy/40" />
       <div className="sparkle-overlay absolute inset-0 opacity-40" />
 
-      <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-16 pt-32 text-center sm:px-6 sm:pb-24">
-        <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-gold">
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-4 pb-10 pt-20 text-center sm:px-6 sm:pb-14">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.35em] text-gold">
           Coming Soon
         </p>
-        <h1 className="text-gradient-gold font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
+        <h1 className="text-gradient-gold font-display text-3xl leading-[1.05] sm:text-4xl md:text-5xl">
           Lunaya Swim Is Coming.
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pearl/80 sm:text-lg">
+        <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-pearl/80 sm:text-base">
           Crystal-detailed, Brazilian-inspired swimwear designed around sun, skin, signs, and the
           energy you bring to the water.
         </p>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
           <GlowButton href="/waitlist" variant="primary">
             Join the Waitlist
           </GlowButton>
@@ -41,11 +41,11 @@ export function Hero() {
           </GlowButton>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-center gap-2.5">
+        <div className="mx-auto mt-7 flex max-w-xl flex-wrap items-center justify-center gap-2">
           {badges.map((b) => (
             <span
               key={b}
-              className="glass-card rounded-full px-3.5 py-1.5 text-[11px] text-pearl/80"
+              className="glass-card rounded-none px-3 py-1 text-[10px] text-pearl/80"
             >
               {b}
             </span>
