@@ -14,7 +14,6 @@ const navLinks = [
   { label: "Color Stories", href: "/color-stories" },
   { label: "Custom Access", href: "/custom-access" },
   { label: "Moodboard", href: "/moodboard" },
-  { label: "Story", href: "/story" },
   { label: "Waitlist", href: "/waitlist" },
 ];
 

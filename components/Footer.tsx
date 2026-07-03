@@ -11,7 +11,6 @@ const columns = [
       { label: "The Drop", href: "/drop" },
       { label: "Color Stories", href: "/color-stories" },
       { label: "Moodboard", href: "/moodboard" },
-      { label: "Story", href: "/story" },
     ],
   },
   {

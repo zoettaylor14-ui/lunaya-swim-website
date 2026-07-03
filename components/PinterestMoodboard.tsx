@@ -4,9 +4,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlowButton } from "@/components/ui/GlowButton";
 import { PinterestIcon } from "@/components/ui/PinterestIcon";
 
-// Do not scrape Pinterest. Only use Pinterest images publicly if they are owned,
-// licensed, or approved by Zoe and Lilly — otherwise these render as labeled
-// placeholder mood cards that link out to Lilly's board.
+// Do not scrape Pinterest. These photos are approved and shown purely as ambient
+// decoration (no labels, no per-image links) — the single button below is the
+// only link out to Lilly's board.
 export function PinterestMoodboard() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
@@ -15,25 +15,21 @@ export function PinterestMoodboard() {
         title="Lilly's Moodboard"
         subtitle="The visual energy behind Lunaya: tropical heat, crystal details, beach goddess styling, fruit tones, jungle greens, and golden skin."
       />
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
-        {pinterest.fallbackCards.map((card) => (
-          <a
-            key={card.label}
-            href={pinterest.boardUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative aspect-[4/5] overflow-hidden rounded-2xl glass-card"
+      <div className="mt-10 grid grid-cols-3 gap-4">
+        {pinterest.decorativeImages.map((image, i) => (
+          <div
+            key={image}
+            className={`relative aspect-[4/5] overflow-hidden rounded-2xl glass-card ${i === 1 ? "translate-y-6" : ""}`}
           >
             <Image
-              src={card.image}
-              alt={card.label}
+              src={image}
+              alt=""
+              aria-hidden
               fill
-              className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
-              sizes="(max-width: 768px) 50vw, 33vw"
+              className="object-cover opacity-90"
+              sizes="(max-width: 768px) 33vw, 25vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-midnight/10 to-transparent" />
-            <p className="absolute bottom-4 left-4 font-display text-lg text-pearl">{card.label}</p>
-          </a>
+          </div>
         ))}
       </div>
       <div className="mt-8 flex justify-center">

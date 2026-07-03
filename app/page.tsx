@@ -4,7 +4,6 @@ import { BrandTeaser } from "@/components/BrandTeaser";
 import { ColorStories } from "@/components/ColorStories";
 import { FirstDropSection } from "@/components/FirstDropSection";
 import { CustomAccessTeaser } from "@/components/CustomAccessTeaser";
-import { BehindTheBrand } from "@/components/BehindTheBrand";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
 import { PinterestMoodboard } from "@/components/PinterestMoodboard";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -18,7 +17,6 @@ export default function Home() {
       <ColorStories />
       <FirstDropSection />
       <CustomAccessTeaser />
-      <BehindTheBrand />
       <InstagramShowcase />
       <PinterestMoodboard />
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">

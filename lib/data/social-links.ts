@@ -3,6 +3,9 @@ import type { InstagramPost } from "@/lib/types";
 export const instagram = {
   handle: process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "lunaya.swimm",
   url: "https://www.instagram.com/lunaya.swimm/",
+  // Real posts to embed via Instagram's official oEmbed widget. Add more permalinks here
+  // as Zoe + Lilly post — no scraping, just Instagram's own embed.js script.
+  postUrls: ["https://www.instagram.com/p/DaQyQHPPtJK/"],
   fallbackPosts: [
     {
       image: "/lunaya/social/instagram-placeholder-1.jpg",
@@ -29,13 +32,11 @@ export const instagram = {
 
 export const pinterest = {
   boardUrl: process.env.NEXT_PUBLIC_PINTEREST_BOARD_URL || "https://pin.it/43ne08NLd",
-  fallbackCards: [
-    { label: "Crystal Details", image: "/lunaya/crystals/crystal-detail-closeup.png" },
-    { label: "Moonlit Beach", image: "/lunaya/moodboard/moonlit-beach-placeholder.jpg" },
-    { label: "Goddess Swim", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
-    { label: "Zodiac Energy", image: "/lunaya/moodboard/moonlit-beach-placeholder.jpg" },
-    { label: "Golden Hour", image: "/lunaya/moodboard/shoreline-walk-ai.png" },
-    { label: "Custom Sparkle", image: "/lunaya/moodboard/crystal-details-placeholder.jpg" },
+  // Real, approved photos used purely as ambient decoration — not clickable tiles.
+  decorativeImages: [
+    "/lunaya/crystals/crystal-detail-closeup.png",
+    "/lunaya/social/social-3.jpg",
+    "/lunaya/social/social-6.jpg",
   ],
 };
 
