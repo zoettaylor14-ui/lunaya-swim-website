@@ -10,7 +10,7 @@ import { InstagramIcon } from "@/components/ui/InstagramIcon";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "The Drop", href: "/drop" },
-  { label: "Color Stories", href: "/color-stories" },
+  { label: "Concepts", href: "/color-stories" },
   { label: "Custom Access", href: "/custom-access" },
   { label: "Moodboard", href: "/moodboard" },
   { label: "Waitlist", href: "/waitlist" },

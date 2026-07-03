@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GlowButton } from "@/components/ui/GlowButton";
 
 const badges = ["Crystal Details Coming Soon", "Brazilian-Inspired Cuts", "Zodiac Energy", "Made by Zoe + Lilly"];
@@ -5,6 +6,13 @@ const badges = ["Crystal Details Coming Soon", "Brazilian-Inspired Cuts", "Zodia
 export function Hero() {
   return (
     <section className="relative flex min-h-[68vh] items-end overflow-hidden sm:min-h-[74vh]">
+      <Image
+        src="/lunaya/backgrounds/hero.jpg"
+        alt="Golden hour ocean, crystal swimwear mood"
+        fill
+        priority
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-midnight/10" />
       <div className="absolute inset-0 bg-gradient-to-r from-plum/30 via-transparent to-navy/30" />
       <div className="sparkle-overlay absolute inset-0 opacity-40" />
