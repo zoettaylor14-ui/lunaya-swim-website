@@ -21,12 +21,8 @@ export function Hero() {
         <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-gold">
           Limited Drop 001 · Zodiac Heat
         </p>
-        <h1 className="text-gradient-gold font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
-          Elite Brazilian Bikinis for <em className="not-italic text-peach">Sun-Drenched</em> Goddesses
-        </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pearl/80 sm:text-lg">
-          Hand-finished crystal swimwear, iconic Brazilian cuts, and color stories made for your sign,
-          your skin, and your summer alter ego.
+          Hand-finished crystal swimwear made for your sign, your skin, and your summer alter ego.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
