@@ -14,14 +14,7 @@ export default function DropPage() {
   return (
     <>
       <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
-        <Image
-          src="/lunaya/moodboard/moodboard.jpg"
-          alt="Lunaya Swim moodboard"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/80 to-midnight/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/70 to-midnight/30" />
         <div className="relative z-10 mx-auto max-w-3xl">
           <Badge tone="blush">Coming Soon</Badge>
           <h1 className="mt-4 font-display text-4xl leading-tight text-pearl sm:text-6xl">
@@ -46,7 +39,7 @@ export default function DropPage() {
         cta={false}
       />
 
-      <section className="bg-[#07120d] px-4 py-14 sm:px-6">
+      <section className="bg-[#07120d]/85 px-4 py-14 sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="font-display text-3xl leading-tight text-pearl sm:text-4xl">

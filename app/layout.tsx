@@ -55,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <div className="site-background" aria-hidden="true" />
         <Header />
         <main className="relative z-10 flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
