@@ -14,7 +14,6 @@ const navLinks = [
   { label: "Zodiac Collection", href: "/zodiac-collection" },
   { label: "Custom Bikinis", href: "/custom-bikinis" },
   { label: "Crystal Guide", href: "/crystal-guide" },
-  { label: "Our Story", href: "/our-story" },
   { label: "Size Guide", href: "/size-guide" },
   { label: "Contact", href: "/contact" },
 ];

@@ -6,7 +6,6 @@ import { CustomCrystalSection } from "@/components/CustomCrystalSection";
 import { CrystalGuidePreview } from "@/components/CrystalGuidePreview";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
 import { PinterestMoodboard } from "@/components/PinterestMoodboard";
-import { FoundersSection } from "@/components/FoundersSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <CrystalGuidePreview />
       <InstagramShowcase />
       <PinterestMoodboard />
-      <FoundersSection />
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
         <SectionHeading
           eyebrow="Early Access"
