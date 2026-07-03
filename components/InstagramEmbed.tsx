@@ -20,7 +20,6 @@ export function InstagramEmbed({ url }: { url: string }) {
     <>
       <blockquote
         className="instagram-media"
-        data-instgrm-captioned
         data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
         data-instgrm-version="14"
         style={{

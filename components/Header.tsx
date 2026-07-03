@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { PinterestIcon } from "@/components/ui/PinterestIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const navLinks = [
@@ -56,15 +55,6 @@ export function Header() {
               className="hidden text-pearl/70 transition-colors hover:text-gold sm:block"
             >
               <InstagramIcon size={18} />
-            </a>
-            <a
-              href="https://pin.it/43ne08NLd"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Lilly's Pinterest moodboard"
-              className="hidden text-pearl/70 transition-colors hover:text-gold sm:block"
-            >
-              <PinterestIcon size={18} />
             </a>
             <Link
               href="/waitlist"
@@ -127,9 +117,6 @@ export function Header() {
           <div className="flex items-center gap-5 px-6 py-4">
             <a href="https://www.instagram.com/lunaya.swimm/" target="_blank" rel="noopener noreferrer">
               <InstagramIcon size={20} className="text-pearl/70" />
-            </a>
-            <a href="https://pin.it/43ne08NLd" target="_blank" rel="noopener noreferrer">
-              <PinterestIcon size={20} className="text-pearl/70" />
             </a>
           </div>
           <div className="px-6 pt-2">

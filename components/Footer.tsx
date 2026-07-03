@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PinterestIcon } from "@/components/ui/PinterestIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const columns = [
@@ -61,9 +60,6 @@ export function Footer() {
             <div className="mb-5 flex gap-4">
               <a href="https://www.instagram.com/lunaya.swimm/" target="_blank" rel="noopener noreferrer">
                 <InstagramIcon size={18} className="text-pearl/70 hover:text-gold" />
-              </a>
-              <a href="https://pin.it/43ne08NLd" target="_blank" rel="noopener noreferrer">
-                <PinterestIcon size={18} className="text-pearl/70 hover:text-gold" />
               </a>
             </div>
             <p className="mb-2 text-xs text-pearl/50">Get first access when we launch.</p>

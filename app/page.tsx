@@ -5,7 +5,6 @@ import { ColorStories } from "@/components/ColorStories";
 import { FirstDropSection } from "@/components/FirstDropSection";
 import { CustomAccessTeaser } from "@/components/CustomAccessTeaser";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
-import { PinterestMoodboard } from "@/components/PinterestMoodboard";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -18,7 +17,6 @@ export default function Home() {
       <FirstDropSection />
       <CustomAccessTeaser />
       <InstagramShowcase />
-      <PinterestMoodboard />
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
         <SectionHeading
           eyebrow="Early Access"

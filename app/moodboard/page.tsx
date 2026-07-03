@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
-import { PinterestMoodboard } from "@/components/PinterestMoodboard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Moodboard | Lunaya Swim",
   description:
-    "The visual energy behind Lunaya Swim — tropical heat, crystal details, beach goddess styling, and the journey from @lunaya.swimm and Lilly's Pinterest board.",
+    "The visual energy behind Lunaya Swim — tropical heat, crystal details, beach goddess styling, and the journey from @lunaya.swimm.",
 };
 
 export default function MoodboardPage() {
@@ -20,7 +19,6 @@ export default function MoodboardPage() {
         />
       </div>
       <InstagramShowcase />
-      <PinterestMoodboard />
     </div>
   );
 }
