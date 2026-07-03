@@ -9,7 +9,7 @@ export function MobileStickyNav() {
 
   const items = [
     { label: "Shop", href: "/shop", icon: Store },
-    { label: "Quiz", href: "/#quiz", icon: Sparkles },
+    { label: "Quiz", href: "/zodiac-collection#quiz", icon: Sparkles },
     { label: "Custom", href: "/custom-bikinis", icon: Wand2 },
   ];
 

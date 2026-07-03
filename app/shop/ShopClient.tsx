@@ -1,72 +1,52 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { zodiacProducts } from "@/lib/data/zodiac-products";
+import { colorStoryProducts } from "@/lib/data/color-stories";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
-const allCrystals = Array.from(new Set(zodiacProducts.flatMap((p) => p.crystals)));
-const allSigns = zodiacProducts.map((p) => p.sign);
+const filterLabels = ["All", "Green", "Purple", "Blue", "Pink", "Brown", "Nude", "White"];
 const sortOptions = ["Featured", "Price: Low to High", "Price: High to Low"] as const;
 
 export default function ShopClient() {
-  const [sign, setSign] = useState<string | null>(null);
-  const [crystal, setCrystal] = useState<string | null>(null);
-  const [customOnly, setCustomOnly] = useState(false);
+  const [color, setColor] = useState<string>("All");
   const [sort, setSort] = useState<(typeof sortOptions)[number]>("Featured");
 
   const filtered = useMemo(() => {
-    let list = zodiacProducts.filter((p) => {
-      if (sign && p.sign !== sign) return false;
-      if (crystal && !p.crystals.includes(crystal)) return false;
-      if (customOnly && !p.badges.includes("Custom Available")) return false;
-      return true;
-    });
+    let list = colorStoryProducts.filter((p) => color === "All" || p.filterLabel === color);
     if (sort === "Price: Low to High") list = [...list].sort((a, b) => a.price - b.price);
     if (sort === "Price: High to Low") list = [...list].sort((a, b) => b.price - a.price);
     return list;
-  }, [sign, crystal, customOnly, sort]);
+  }, [color, sort]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Shop All"
-        title="Every Piece, One Place"
-        subtitle="Filter by sign, crystal color, or find the pieces open for custom orders."
+        eyebrow="Shop the Drop"
+        title="Crystal Brazilian Swimwear"
+        subtitle="Explore Lunaya's color stories, zodiac shades, and crystal-detailed bikinis in limited quantities."
         align="left"
       />
 
-      <div className="mt-8 flex flex-wrap items-center gap-2">
-        <FilterChip active={sign === null} onClick={() => setSign(null)}>
-          All Signs
-        </FilterChip>
-        {allSigns.map((s) => (
-          <FilterChip key={s} active={sign === s} onClick={() => setSign(sign === s ? null : s)}>
-            {s}
-          </FilterChip>
+      <div id="colors" className="mt-8 flex scroll-mt-24 flex-wrap items-center gap-2">
+        {filterLabels.map((label) => (
+          <button
+            key={label}
+            onClick={() => setColor(label)}
+            className={cn(
+              "rounded-full border px-3.5 py-1.5 text-xs transition-colors",
+              color === label ? "border-gold bg-gold/10 text-gold" : "border-pearl/15 text-pearl/70 hover:border-gold/40"
+            )}
+          >
+            {label}
+          </button>
         ))}
-      </div>
-
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <FilterChip active={crystal === null} onClick={() => setCrystal(null)}>
-            All Crystals
-          </FilterChip>
-          {allCrystals.map((c) => (
-            <FilterChip key={c} active={crystal === c} onClick={() => setCrystal(crystal === c ? null : c)}>
-              {c}
-            </FilterChip>
-          ))}
-          <FilterChip active={customOnly} onClick={() => setCustomOnly((v) => !v)}>
-            Custom Available
-          </FilterChip>
-        </div>
 
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value as (typeof sortOptions)[number])}
-          className="rounded-full border border-pearl/15 bg-pearl/5 px-4 py-2 text-xs text-pearl outline-none"
+          className="ml-auto rounded-full border border-pearl/15 bg-pearl/5 px-4 py-2 text-xs text-pearl outline-none"
         >
           {sortOptions.map((opt) => (
             <option key={opt} value={opt} className="bg-navy">
@@ -88,27 +68,5 @@ export default function ShopClient() {
         <p className="mt-16 text-center text-pearl/50">No pieces match those filters yet.</p>
       )}
     </div>
-  );
-}
-
-function FilterChip({
-  children,
-  active,
-  onClick,
-}: {
-  children: React.ReactNode;
-  active: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "rounded-full border px-3.5 py-1.5 text-xs transition-colors",
-        active ? "border-gold bg-gold/10 text-gold" : "border-pearl/15 text-pearl/70 hover:border-gold/40"
-      )}
-    >
-      {children}
-    </button>
   );
 }

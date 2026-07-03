@@ -9,6 +9,12 @@ export type ZodiacProduct = {
   price: number;
   badges: string[];
   image: string;
+  /** "zodiac" = one of the 12 sign pieces, "color-story" = Drop 001 color story piece */
+  collection?: "zodiac" | "color-story";
+  /** Zodiac signs this color story's energy is drawn to (color-story pieces only) */
+  energy?: string[];
+  /** Shop filter chip label, e.g. "Green" (color-story pieces only) */
+  filterLabel?: string;
 };
 
 export type Crystal = {

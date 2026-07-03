@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ShoppingBag, Menu, X } from "lucide-react";
+import { ShoppingBag, Menu, X, Search } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
 import { cn } from "@/lib/utils";
 import { PinterestIcon } from "@/components/ui/PinterestIcon";
@@ -11,11 +11,11 @@ import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const navLinks = [
   { label: "Shop", href: "/shop" },
+  { label: "New Drop", href: "/new-drop" },
   { label: "Zodiac Collection", href: "/zodiac-collection" },
-  { label: "Custom Bikinis", href: "/custom-bikinis" },
-  { label: "Crystal Guide", href: "/crystal-guide" },
-  { label: "Size Guide", href: "/size-guide" },
-  { label: "Contact", href: "/contact" },
+  { label: "Brazilian Cuts", href: "/brazilian-cuts" },
+  { label: "Custom", href: "/custom-bikinis" },
+  { label: "Story", href: "/our-story" },
 ];
 
 export function Header() {
@@ -50,6 +50,13 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/shop"
+              aria-label="Search Lunaya Swim"
+              className="hidden text-pearl/70 transition-colors hover:text-gold sm:block"
+            >
+              <Search size={18} strokeWidth={1.5} />
+            </Link>
             <a
               href="https://www.instagram.com/lunaya.swimm/"
               target="_blank"

@@ -18,7 +18,7 @@ export function ProductActions({ product }: { product: ZodiacProduct }) {
   const addToCart = () => {
     addItem({
       slug: product.slug,
-      name: `${product.sign} ${product.name}`,
+      name: product.collection === "color-story" ? product.name : `${product.sign} ${product.name}`,
       sign: product.sign,
       price: product.price,
       image: product.image,

@@ -1,9 +1,8 @@
 import { Hero } from "@/components/Hero";
-import { ZodiacPreview } from "@/components/ZodiacPreview";
-import { QuizSection } from "@/components/QuizSection";
-import { DropSection } from "@/components/DropSection";
-import { CustomCrystalSection } from "@/components/CustomCrystalSection";
-import { CrystalGuidePreview } from "@/components/CrystalGuidePreview";
+import { ColorStories } from "@/components/ColorStories";
+import { BrazilianCutsTeaser } from "@/components/BrazilianCuts";
+import { Craftsmanship } from "@/components/Craftsmanship";
+import { ZodiacStrip } from "@/components/ZodiacStrip";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
 import { PinterestMoodboard } from "@/components/PinterestMoodboard";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -13,11 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ZodiacPreview />
-      <QuizSection />
-      <DropSection />
-      <CustomCrystalSection />
-      <CrystalGuidePreview />
+      <ColorStories />
+      <BrazilianCutsTeaser />
+      <Craftsmanship />
+      <ZodiacStrip />
       <InstagramShowcase />
       <PinterestMoodboard />
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">

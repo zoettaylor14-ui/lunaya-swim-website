@@ -7,20 +7,37 @@ const columns = [
   {
     title: "Shop",
     links: [
-      { label: "Shop All", href: "/shop" },
-      { label: "Zodiac Collection", href: "/zodiac-collection" },
-      { label: "Custom Bikinis", href: "/custom-bikinis" },
-      { label: "Crystal Guide", href: "/crystal-guide" },
+      { label: "All Swimwear", href: "/shop" },
+      { label: "New Drop", href: "/new-drop" },
+      { label: "Brazilian Cuts", href: "/brazilian-cuts" },
+      { label: "Best Sellers", href: "/shop" },
     ],
   },
   {
-    title: "Help",
+    title: "Collections",
+    links: [
+      { label: "Zodiac Collection", href: "/zodiac-collection" },
+      { label: "Crystal Guide", href: "/crystal-guide" },
+      { label: "Custom Orders", href: "/custom-bikinis" },
+      { label: "Limited Drops", href: "/waitlist" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { label: "Our Story", href: "/our-story" },
+      { label: "Care Guide", href: "/care-guide" },
+      { label: "Size Guide", href: "/size-guide" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Customer Care",
     links: [
       { label: "Size Guide", href: "/size-guide" },
       { label: "Care Guide", href: "/care-guide" },
-      { label: "Shipping", href: "/care-guide#shipping" },
-      { label: "Returns", href: "/care-guide#returns" },
-      { label: "Contact", href: "/contact" },
+      { label: "Shipping & Returns", href: "/care-guide#shipping" },
+      { label: "FAQ", href: "/contact" },
     ],
   },
 ];
@@ -29,8 +46,8 @@ export function Footer() {
   return (
     <footer className="relative z-10 border-t border-pearl/10 bg-navy/60">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Image
               src="/lunaya/logo-primary.svg"
               alt="Lunaya Swim"

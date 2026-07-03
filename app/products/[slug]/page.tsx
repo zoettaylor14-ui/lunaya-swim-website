@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getProductBySlug, getRelatedProducts, zodiacProducts } from "@/lib/data/zodiac-products";
+import { getProductBySlug, getRelatedProducts, allProducts } from "@/lib/data/products";
 import { formatPrice } from "@/lib/utils";
 import { Badge } from "@/components/ui/Badge";
 import { ProductGallery } from "@/components/ProductGallery";
@@ -8,7 +8,7 @@ import { ProductActions } from "./ProductActions";
 import { ProductCard } from "@/components/ProductCard";
 
 export function generateStaticParams() {
-  return zodiacProducts.map((p) => ({ slug: p.slug }));
+  return allProducts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -19,11 +19,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
+  const title =
+    product.collection === "color-story"
+      ? `${product.name} Crystal Bikini | Lunaya Swim`
+      : `${product.sign} ${product.name} Crystal Bikini | Lunaya Swim`;
   return {
-    title: `${product.sign} ${product.name} Crystal Bikini | Lunaya Swim`,
+    title,
     description: product.description,
     openGraph: {
-      title: `${product.sign} ${product.name} Crystal Bikini | Lunaya Swim`,
+      title,
       description: product.description,
       images: [product.image],
     },
@@ -33,7 +37,10 @@ export async function generateMetadata({
 const detailBlocks = (product: NonNullable<ReturnType<typeof getProductBySlug>>) => [
   {
     title: "The Energy",
-    copy: `${product.name} was made for ${product.sign} energy — ${product.description.toLowerCase()}`,
+    copy:
+      product.collection === "color-story"
+        ? product.description
+        : `${product.name} was made for ${product.sign} energy — ${product.description.toLowerCase()}`,
   },
   {
     title: "The Fit",
@@ -68,6 +75,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <h1 className="mt-2 font-display text-4xl text-pearl">{product.name} Crystal Bikini</h1>
           <p className="mt-3 text-base text-pearl/70">{product.description}</p>
           <p className="mt-4 font-display text-2xl text-gold">{formatPrice(product.price)}</p>
+          {product.collection === "color-story" && (
+            <p className="mt-3 text-sm text-pearl/60">
+              <span className="text-gold">Crystals:</span> {product.crystals.join(" + ")}
+              {product.energy && (
+                <>
+                  {" "}
+                  · <span className="text-gold">Energy:</span> {product.energy.join(" · ")}
+                </>
+              )}
+            </p>
+          )}
 
           <div className="mt-4 flex flex-wrap gap-2">
             {product.badges.map((b) => (

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { GlowButton } from "@/components/ui/GlowButton";
 
-const badges = ["Handmade Crystal Details", "Zodiac Inspired", "Limited Drops", "Custom Available"];
+const badges = ["Hand-Applied Crystals", "Brazilian Cuts", "Zodiac Inspired", "Made by Zoe + Lilly"];
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-end overflow-hidden sm:min-h-[95vh]">
       <Image
-        src="/lunaya/backgrounds/hero-golden-hour.png"
+        src="/lunaya/backgrounds/hero.jpg"
         alt="Golden hour ocean, crystal swimwear mood"
         fill
         priority
@@ -19,25 +19,25 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-16 pt-32 text-center sm:px-6 sm:pb-24">
         <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-gold">
-          Lunaya Swim
+          Limited Drop 001 · Zodiac Heat
         </p>
         <h1 className="text-gradient-gold font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
-          Swimwear Made for Your Sign.
+          Elite Brazilian Bikinis for <em className="not-italic text-peach">Sun-Drenched</em> Goddesses
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pearl/80 sm:text-lg">
-          Crystal-adorned bikinis designed around zodiac energy, goddess confidence, and
-          limited-edition summer drops.
+          Hand-finished crystal swimwear, iconic Brazilian cuts, and color stories made for your sign,
+          your skin, and your summer alter ego.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <GlowButton href="/shop" variant="primary">
             Shop the Drop
           </GlowButton>
-          <GlowButton href="/#quiz" variant="secondary">
-            Find Your Sign
+          <GlowButton href="/shop#colors" variant="secondary">
+            Explore Colors
           </GlowButton>
           <GlowButton href="/custom-bikinis" variant="secondary">
-            Build Your Custom Bikini
+            Build Custom
           </GlowButton>
         </div>
 

@@ -37,6 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# design reference pack (source-of-truth HTML mockup, already integrated into the app)
+/design-reference
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
