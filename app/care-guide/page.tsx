@@ -39,23 +39,15 @@ export default function CareGuidePage() {
         ))}
       </div>
 
-      <div id="shipping" className="mt-16 grid gap-8 sm:grid-cols-2">
-        <div className="glass-card rounded-2xl p-6">
-          <h2 className="font-display text-xl text-gold">Shipping + Handmade Timing</h2>
-          <p className="mt-3 text-sm leading-relaxed text-pearl/70">
-            Ready-to-ship pieces from a current drop typically ship within 3–5 business days. Custom
-            crystal bikinis are finished by hand in small batches and generally take 2–3 weeks — timing
-            is confirmed with you directly by Zoe + Lilly after your request is submitted.
-          </p>
-        </div>
-        <div id="returns" className="glass-card rounded-2xl p-6">
-          <h2 className="font-display text-xl text-gold">Return Policy</h2>
-          <p className="mt-3 text-sm leading-relaxed text-pearl/70">
-            Because of the handmade nature of each piece, custom and made-to-order bikinis are final
-            sale. Ready-to-ship drop pieces may be exchanged within 7 days if unworn, with tags attached,
-            and crystal detail intact. Reach out on the contact page and we&apos;ll take care of you.
-          </p>
-        </div>
+      <div className="mt-16 glass-card rounded-2xl p-6 text-center">
+        <h2 className="font-display text-xl text-gold">Shipping &amp; Returns</h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-pearl/70">
+          Full shipping, timing, and return details will be announced when Drop 001 launches. Join the{" "}
+          <a href="/waitlist" className="text-gold underline underline-offset-2">
+            waitlist
+          </a>{" "}
+          to be the first to hear.
+        </p>
       </div>
     </div>
   );

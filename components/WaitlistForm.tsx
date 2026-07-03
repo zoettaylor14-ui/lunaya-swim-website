@@ -1,15 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Sparkles } from "lucide-react";
 import { Label, Input, ChipGroup } from "@/components/ui/FormField";
 import { GlowButton } from "@/components/ui/GlowButton";
-import { zodiacSigns, waitlistInterests } from "@/lib/data/options";
+import { zodiacSigns, shadeNames } from "@/lib/data/options";
+import { getShadeBySlug } from "@/lib/data/color-stories";
 
 export function WaitlistForm() {
+  const searchParams = useSearchParams();
+  const shadeFromQuery = getShadeBySlug(searchParams.get("shade") ?? "")?.name ?? "";
+
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [sign, setSign] = useState("");
-  const [interest, setInterest] = useState("");
+  const [favoriteShade, setFavoriteShade] = useState(shadeFromQuery);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,8 +25,8 @@ export function WaitlistForm() {
       email: form.get("email"),
       phone: form.get("phone"),
       zodiacSign: sign,
+      favoriteShade,
       instagramHandle: form.get("instagramHandle"),
-      interest,
     };
     try {
       const res = await fetch("/api/waitlist", {
@@ -40,10 +45,9 @@ export function WaitlistForm() {
     return (
       <div className="glass-card rounded-3xl p-8 text-center sm:p-12">
         <Sparkles className="mx-auto mb-4 text-gold" size={28} />
-        <h3 className="font-display text-2xl text-pearl">You&apos;re on the list.</h3>
+        <h3 className="font-display text-2xl text-pearl">You&apos;re on the Lunaya list.</h3>
         <p className="mt-2 text-sm text-pearl/60">
-          Keep an eye on your inbox — Zoe + Lilly will send first access to Drop 001 before anyone
-          else.
+          We&apos;ll send first looks, drop updates, and early access soon.
         </p>
       </div>
     );
@@ -76,8 +80,8 @@ export function WaitlistForm() {
         <ChipGroup options={zodiacSigns} value={sign} onChange={setSign} />
       </div>
       <div>
-        <Label required>Interested In</Label>
-        <ChipGroup options={waitlistInterests} value={interest} onChange={setInterest} />
+        <Label>Favorite Shade</Label>
+        <ChipGroup options={shadeNames} value={favoriteShade} onChange={setFavoriteShade} />
       </div>
       <GlowButton type="submit" className="w-full">
         {status === "submitting" ? "Joining..." : "Join the Waitlist"}

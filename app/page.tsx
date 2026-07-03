@@ -1,8 +1,10 @@
+import { Suspense } from "react";
 import { Hero } from "@/components/Hero";
+import { BrandTeaser } from "@/components/BrandTeaser";
 import { ColorStories } from "@/components/ColorStories";
-import { BrazilianCutsTeaser } from "@/components/BrazilianCuts";
-import { Craftsmanship } from "@/components/Craftsmanship";
-import { ZodiacStrip } from "@/components/ZodiacStrip";
+import { FirstDropSection } from "@/components/FirstDropSection";
+import { CustomAccessTeaser } from "@/components/CustomAccessTeaser";
+import { BehindTheBrand } from "@/components/BehindTheBrand";
 import { InstagramShowcase } from "@/components/InstagramShowcase";
 import { PinterestMoodboard } from "@/components/PinterestMoodboard";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -12,20 +14,23 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <BrandTeaser />
       <ColorStories />
-      <BrazilianCutsTeaser />
-      <Craftsmanship />
-      <ZodiacStrip />
+      <FirstDropSection />
+      <CustomAccessTeaser />
+      <BehindTheBrand />
       <InstagramShowcase />
       <PinterestMoodboard />
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
         <SectionHeading
           eyebrow="Early Access"
-          title="Get Early Access to the Next Drop"
-          subtitle="Join the Lunaya list for first access to crystal zodiac bikinis, custom openings, drop dates, and behind-the-scenes previews from Zoe + Lilly."
+          title="Be First to Enter the Lunaya World"
+          subtitle="Join the early list for first access to drop previews, shade voting, sample reveals, custom openings, and launch-day access."
         />
         <div className="mt-10">
-          <WaitlistForm />
+          <Suspense>
+            <WaitlistForm />
+          </Suspense>
         </div>
       </section>
     </>

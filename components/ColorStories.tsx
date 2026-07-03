@@ -1,12 +1,12 @@
-import { colorStoryProducts } from "@/lib/data/color-stories";
-import { ProductCard } from "@/components/ProductCard";
+import { colorStories } from "@/lib/data/color-stories";
+import { ShadeCard } from "@/components/ShadeCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlowButton } from "@/components/ui/GlowButton";
 
 export function ColorStories({
-  eyebrow = "Drop 001 · Zodiac Heat",
+  eyebrow = "Color Concepts",
   title = "Color Stories",
-  subtitle = "Seven shades. Endless energy. Choose the color that matches your mood, your sign, or the beach version of you.",
+  subtitle = "The shades taking shape for the first Lunaya drop — each one a mood, a crystal direction, and a piece still being built.",
   cta = true,
 }: {
   eyebrow?: string;
@@ -18,14 +18,14 @@ export function ColorStories({
     <section id="colors" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
       <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
-        {colorStoryProducts.map((product) => (
-          <ProductCard key={product.slug} product={product} />
+        {colorStories.map((shade) => (
+          <ShadeCard key={shade.slug} shade={shade} />
         ))}
       </div>
       {cta && (
         <div className="mt-8 flex justify-center">
-          <GlowButton href="/shop" variant="secondary">
-            View All Colors
+          <GlowButton href="/color-stories" variant="secondary">
+            See All Color Stories
           </GlowButton>
         </div>
       )}

@@ -5,12 +5,12 @@ import { GlowButton } from "@/components/ui/GlowButton";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "New Drop | Lunaya Swim",
+  title: "The Drop | Lunaya Swim",
   description:
-    "Drop 001: Zodiac Heat — the first limited crystal bikini collection from Lunaya Swim. Hand-finished pieces, tropical color stories, and Brazilian cuts.",
+    "Drop 001: The First Lunaya Collection is being shaped now. Limited pieces, hand-finished crystal details, and Brazilian-inspired silhouettes — join the waitlist for early access.",
 };
 
-export default function NewDropPage() {
+export default function DropPage() {
   return (
     <>
       <section className="relative overflow-hidden px-4 py-24 sm:px-6 sm:py-32">
@@ -25,23 +25,24 @@ export default function NewDropPage() {
         <div className="relative z-10 mx-auto max-w-3xl">
           <Badge tone="blush">Coming Soon</Badge>
           <h1 className="mt-4 font-display text-4xl leading-tight text-pearl sm:text-6xl">
-            Drop 001: Zodiac Heat
+            Drop 001: The First Lunaya Collection
           </h1>
           <p className="mt-4 max-w-xl text-base text-pearl/80 sm:text-lg">
-            The first limited crystal bikini collection inspired by the signs. Hand-finished pieces,
-            tropical color stories, and Brazilian cuts made for sun-drenched moments.
+            Our first crystal swimwear drop is being shaped now. Expect limited pieces, hand-finished
+            crystal details, Brazilian-inspired silhouettes, tropical colors, and designs made to feel
+            like wearable sunlight.
           </p>
-          <p className="mt-6 font-display text-3xl text-gold">-- : -- : --</p>
+          <p className="mt-6 text-xs uppercase tracking-widest text-gold">Drop date coming soon.</p>
           <div className="mt-6">
-            <GlowButton href="/waitlist">Join Early Access</GlowButton>
+            <GlowButton href="/waitlist">Get Early Access</GlowButton>
           </div>
         </div>
       </section>
 
       <ColorStories
         eyebrow="Preview the Drop"
-        title="Preview the Drop"
-        subtitle="Seven shades launch first, then zodiac customs open by request."
+        title="Color Stories in Progress"
+        subtitle="Seven shade concepts are taking shape first. Zodiac-influenced customs open by request once the drop is live."
         cta={false}
       />
 
@@ -52,15 +53,16 @@ export default function NewDropPage() {
               Limited Pieces. Big Energy.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-pearl/70 sm:text-base">
-              Once a drop sells out, it may not return in the same design. This keeps the pieces
-              personal and the brand special.
+              When the drop opens, quantities will be limited by design — small batches keep the pieces
+              personal and the brand special. Joining the waitlist now is the only way to get first
+              access.
             </p>
             <div className="mt-6">
               <GlowButton href="/waitlist">Get on the List</GlowButton>
             </div>
           </div>
           <div className="relative aspect-[16/9] overflow-hidden rounded-3xl glass-card">
-            <Image src="/lunaya/moodboard/flatlay.jpg" alt="Lunaya first drop flatlay" fill className="object-cover" />
+            <Image src="/lunaya/moodboard/flatlay.jpg" alt="Lunaya first drop concept flatlay" fill className="object-cover" />
           </div>
         </div>
       </section>

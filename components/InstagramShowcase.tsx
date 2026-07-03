@@ -15,8 +15,8 @@ export function InstagramShowcase() {
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
       <SectionHeading
         eyebrow={`@${instagram.handle}`}
-        title="From the Lunaya World"
-        subtitle="Follow the sparkle, behind the scenes, custom pieces, and first drop previews."
+        title="The Lunaya World"
+        subtitle="Follow the mood, the making, the first samples, and the launch journey."
       />
       <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
         {posts.map((post, i) => (
@@ -46,7 +46,7 @@ export function InstagramShowcase() {
       <div className="mt-8 flex justify-center">
         <GlowButton href={instagram.url} variant="secondary">
           <InstagramIcon size={16} />
-          Follow on Instagram
+          Follow @{instagram.handle}
         </GlowButton>
       </div>
     </section>

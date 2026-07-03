@@ -1,120 +1,91 @@
-import type { ZodiacProduct } from "@/lib/types";
+import type { ShadeStory } from "@/lib/types";
 
-// Drop 001: Zodiac Heat — the seven color stories from the approved Lunaya Swim
-// HTML pack (assets/products.json). These are the primary shop/new-drop pieces;
-// the 12 zodiac-sign pieces in zodiac-products.ts are the separate Zodiac Collection.
-export const colorStoryProducts: ZodiacProduct[] = [
+// Color story concepts for Lunaya Swim's first drop — still in development.
+// These are teaser shade concepts, not purchasable products: no prices, no stock.
+export const colorStories: ShadeStory[] = [
   {
     slug: "emerald-jungle",
     name: "Emerald Jungle",
-    sign: "Emerald Green",
-    symbol: "✦",
-    colors: ["emerald"],
-    crystals: ["Emerald", "Champagne"],
+    shortLabel: "Emerald",
+    moodWords: ["Lush", "Magnetic", "Tropical"],
+    crystals: ["Emerald", "Gold", "Clear AB"],
     description:
-      "A lush green crystal bikini for grounded beauty, tropical confidence, and rich earth energy.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+      "A deep green shade concept inspired by jungle leaves, emerald crystals, and the feeling of stepping into warm water under palm shadows.",
     image: "/lunaya/products/emerald-jungle.jpg",
-    collection: "color-story",
-    energy: ["Taurus", "Virgo", "Capricorn"],
-    filterLabel: "Green",
+    moodImages: ["/lunaya/social/social-1.jpg", "/lunaya/social/social-2.jpg"],
   },
   {
     slug: "amethyst-dream",
     name: "Amethyst Dream",
-    sign: "Amethyst Purple",
-    symbol: "✦",
-    colors: ["blush"],
+    shortLabel: "Amethyst",
+    moodWords: ["Soft", "Mystical", "Feminine"],
     crystals: ["Amethyst", "Clear AB"],
     description:
-      "A purple crystal bikini for intuitive glow, moonlit softness, and mystic beach energy.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+      "A purple shade concept inspired by twilight skies, amethyst crystals, and dreamy moonlit swim moments.",
     image: "/lunaya/products/amethyst-dream.jpg",
-    collection: "color-story",
-    energy: ["Pisces", "Aquarius", "Scorpio"],
-    filterLabel: "Purple",
+    moodImages: ["/lunaya/social/social-3.jpg", "/lunaya/social/social-4.jpg"],
   },
   {
     slug: "ocean-mystic",
     name: "Ocean Mystic",
-    sign: "Sapphire Blue",
-    symbol: "✦",
-    colors: ["blue"],
+    shortLabel: "Ocean",
+    moodWords: ["Cool", "Reflective", "Magnetic"],
     crystals: ["Sapphire", "Clear AB"],
     description:
-      "A blue crystal bikini made for shimmering water, depth, calm, and mermaid-coded moments.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+      "A blue shade concept inspired by clear water, sapphire crystals, and the glow of sun hitting the sea.",
     image: "/lunaya/products/ocean-mystic.jpg",
-    collection: "color-story",
-    energy: ["Cancer", "Pisces", "Aquarius"],
-    filterLabel: "Blue",
+    moodImages: ["/lunaya/social/social-5.jpg", "/lunaya/social/social-6.jpg"],
   },
   {
     slug: "hibiscus-kiss",
     name: "Hibiscus Kiss",
-    sign: "Blush Pink",
-    symbol: "✦",
-    colors: ["pink"],
+    shortLabel: "Hibiscus",
+    moodWords: ["Flirty", "Warm", "Soft"],
     crystals: ["Blush", "Champagne"],
     description:
-      "A pink crystal bikini with soft tropical romance, hibiscus warmth, and feminine sparkle.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+      "A pink shade concept inspired by tropical flowers, blush sunsets, and crystal sparkle against glowing skin.",
     image: "/lunaya/products/hibiscus-kiss.jpg",
-    collection: "color-story",
-    energy: ["Libra", "Leo", "Cancer"],
-    filterLabel: "Pink",
+    moodImages: ["/lunaya/social/social-7.jpg", "/lunaya/social/social-8.jpg"],
   },
   {
-    slug: "cocoa-muse",
-    name: "Cocoa Muse",
-    sign: "Cocoa Brown",
-    symbol: "✦",
-    colors: ["bronze"],
-    crystals: ["Smoky Quartz", "Gold"],
-    description: "A brown crystal bikini for bronze skin, earthy luxury, and rich goddess energy.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+    slug: "golden-earth",
+    name: "Golden Earth",
+    shortLabel: "Golden Earth",
+    moodWords: ["Bronzed", "Grounded", "Radiant"],
+    crystals: ["Champagne", "Gold"],
+    description:
+      "A brown and gold shade concept inspired by sun-warmed skin, cocoa tones, and champagne crystal shine.",
     image: "/lunaya/products/cocoa-muse.jpg",
-    collection: "color-story",
-    energy: ["Scorpio", "Capricorn", "Taurus"],
-    filterLabel: "Brown",
+    moodImages: ["/lunaya/social/social-1.jpg", "/lunaya/social/social-6.jpg"],
   },
   {
-    slug: "nude-sands",
-    name: "Nude Sands",
-    sign: "Nude Champagne",
-    symbol: "✦",
-    colors: ["nude"],
+    slug: "nude-mirage",
+    name: "Nude Mirage",
+    shortLabel: "Nude",
+    moodWords: ["Soft", "Clean", "Barely-there luxury"],
     crystals: ["Champagne", "Pearl"],
-    description: "A nude crystal bikini for sunlit skin, minimal luxury, and soft beach elegance.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+    description:
+      "A nude shade concept inspired by sand, shell tones, champagne crystals, and effortless beach confidence.",
     image: "/lunaya/products/nude-sands.jpg",
-    collection: "color-story",
-    energy: ["Virgo", "Libra", "Taurus"],
-    filterLabel: "Nude",
+    moodImages: ["/lunaya/social/social-2.jpg", "/lunaya/social/social-7.jpg"],
   },
   {
     slug: "lunaya-pearl",
     name: "Lunaya Pearl",
-    sign: "Pearl White",
-    symbol: "✦",
-    colors: ["pearl"],
+    shortLabel: "Pearl",
+    moodWords: ["Clean", "Luminous", "Goddess-like"],
     crystals: ["Pearl", "Clear AB"],
-    description: "A white crystal bikini for angelic glow, bridal beach moments, and luminous softness.",
-    price: 189,
-    badges: ["Color Story", "Crystal Detail", "Limited Drop"],
+    description:
+      "A white shade concept inspired by pearls, moonlight, clear crystals, and bridal-level beach energy.",
     image: "/lunaya/products/lunaya-pearl.jpg",
-    collection: "color-story",
-    energy: ["Cancer", "Virgo", "Pisces"],
-    filterLabel: "White",
+    moodImages: ["/lunaya/social/social-3.jpg", "/lunaya/social/social-8.jpg"],
   },
 ];
 
-export function getColorStoryBySlug(slug: string): ZodiacProduct | undefined {
-  return colorStoryProducts.find((p) => p.slug === slug);
+export function getShadeBySlug(slug: string): ShadeStory | undefined {
+  return colorStories.find((s) => s.slug === slug);
+}
+
+export function getRelatedShades(slug: string, count = 3): ShadeStory[] {
+  return colorStories.filter((s) => s.slug !== slug).slice(0, count);
 }

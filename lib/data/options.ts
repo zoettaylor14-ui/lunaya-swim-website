@@ -3,22 +3,11 @@ export const topStyles = ["Triangle", "Bandeau", "Halter", "One shoulder", "Unde
 export const bottomStyles = [
   "Tie-side",
   "Cheeky",
-  "Brazilian",
+  "Brazilian-inspired",
   "High-leg",
   "High-waist",
   "Minimal",
   "Custom",
-];
-
-export const crystalPlacements = [
-  "Center chest",
-  "Straps",
-  "Hip detail",
-  "Full outline",
-  "Zodiac symbol",
-  "Scattered sparkle",
-  "Name / initials",
-  "Custom design",
 ];
 
 export const crystalColors = [
@@ -47,30 +36,22 @@ export const zodiacSigns = [
   "Pisces",
 ];
 
-export const coveragePreferences = ["Minimal", "Moderate", "Full", "Not sure yet"];
-
-export const budgetRanges = ["$100–150", "$150–200", "$200–300", "$300+"];
-
 export const contactReasons = [
-  "Custom bikini",
-  "Sizing help",
-  "Order question",
-  "Collab",
+  "Custom access",
+  "Waitlist question",
   "Press",
+  "Collab",
   "Other",
 ];
 
-export const waitlistInterests = ["Zodiac drop", "Custom bikini", "Both"];
-
-export const sizes = ["XS", "S", "M", "L", "XL"];
-
-export const bikiniColors = [
-  "Midnight Black",
-  "Deep Plum",
-  "Moonlit Navy",
-  "Ocean Blue",
-  "Pearl White",
-  "Champagne Gold",
-  "Blush Pink",
-  "Sunset Peach",
+// Shade names used for both "favorite shade" (waitlist) and "dream bikini shade" (custom access)
+export const shadeNames = [
+  "Emerald Jungle",
+  "Amethyst Dream",
+  "Ocean Mystic",
+  "Hibiscus Kiss",
+  "Golden Earth",
+  "Nude Mirage",
+  "Lunaya Pearl",
+  "Not sure yet",
 ];

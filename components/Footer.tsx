@@ -5,39 +5,22 @@ import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const columns = [
   {
-    title: "Shop",
+    title: "Explore",
     links: [
-      { label: "All Swimwear", href: "/shop" },
-      { label: "New Drop", href: "/new-drop" },
-      { label: "Brazilian Cuts", href: "/brazilian-cuts" },
-      { label: "Best Sellers", href: "/shop" },
+      { label: "Home", href: "/" },
+      { label: "The Drop", href: "/drop" },
+      { label: "Color Stories", href: "/color-stories" },
+      { label: "Moodboard", href: "/moodboard" },
+      { label: "Story", href: "/story" },
     ],
   },
   {
-    title: "Collections",
+    title: "Get Involved",
     links: [
-      { label: "Zodiac Collection", href: "/zodiac-collection" },
+      { label: "Join the Waitlist", href: "/waitlist" },
+      { label: "Request Custom Access", href: "/custom-access" },
       { label: "Crystal Guide", href: "/crystal-guide" },
-      { label: "Custom Orders", href: "/custom-bikinis" },
-      { label: "Limited Drops", href: "/waitlist" },
-    ],
-  },
-  {
-    title: "About",
-    links: [
-      { label: "Our Story", href: "/our-story" },
-      { label: "Care Guide", href: "/care-guide" },
-      { label: "Size Guide", href: "/size-guide" },
       { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Customer Care",
-    links: [
-      { label: "Size Guide", href: "/size-guide" },
-      { label: "Care Guide", href: "/care-guide" },
-      { label: "Shipping & Returns", href: "/care-guide#shipping" },
-      { label: "FAQ", href: "/contact" },
     ],
   },
 ];
@@ -46,8 +29,8 @@ export function Footer() {
   return (
     <footer className="relative z-10 border-t border-pearl/10 bg-navy/60">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
-          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+          <div className="col-span-2 md:col-span-2">
             <Image
               src="/lunaya/logo-primary.svg"
               alt="Lunaya Swim"
@@ -56,7 +39,8 @@ export function Footer() {
               className="mb-4 h-9 w-auto"
             />
             <p className="max-w-xs text-sm text-pearl/60">
-              Crystal swimwear made for your sign, your summer, and your main-character moment.
+              Crystal swimwear is coming. Built for your sign, your shade, and your sun-soaked alter
+              ego.
             </p>
           </div>
           {columns.map((col) => (
@@ -82,20 +66,19 @@ export function Footer() {
               <a href="https://pin.it/43ne08NLd" target="_blank" rel="noopener noreferrer">
                 <PinterestIcon size={18} className="text-pearl/70 hover:text-gold" />
               </a>
-              <span className="text-[11px] text-pearl/40">TikTok — coming soon</span>
             </div>
-            <p className="mb-2 text-xs text-pearl/50">Get first access to new drops.</p>
+            <p className="mb-2 text-xs text-pearl/50">Get first access when we launch.</p>
             <Link
               href="/waitlist"
               className="inline-block rounded-full border border-gold/40 px-4 py-2 text-xs text-gold hover:bg-gold/10"
             >
-              Email Signup
+              Join the Waitlist
             </Link>
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-pearl/10 pt-6 text-xs text-pearl/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Lunaya Swim. Made by Zoe + Lilly.</p>
-          <p>Crystal astrology swimwear.</p>
+          <p>Crystal swimwear, coming soon.</p>
         </div>
       </div>
     </footer>

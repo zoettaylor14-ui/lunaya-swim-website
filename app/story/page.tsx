@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GlowButton } from "@/components/ui/GlowButton";
 
 export const metadata: Metadata = {
-  title: "Our Story | Lunaya Swim",
+  title: "Story | Lunaya Swim",
   description:
-    "Swimwear that feels like energy — the story behind Lunaya Swim, made by Zoe + Lilly.",
+    "Swimwear that feels like energy — the story behind Lunaya Swim, still being built by Zoe + Lilly.",
 };
 
-export default function OurStoryPage() {
+export default function StoryPage() {
   return (
     <>
       <div className="mx-auto max-w-4xl px-4 pt-16 sm:px-6">
@@ -55,6 +56,19 @@ export default function OurStoryPage() {
               the same way.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-16 text-center sm:px-6">
+        <h2 className="font-display text-2xl text-pearl sm:text-3xl">Made by Zoe + Lilly</h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-pearl/70 sm:text-base">
+          The brand is still in its first chapter, and every detail is being shaped with intention —
+          from the colors to the crystal placements to the way each piece will make someone feel.
+        </p>
+        <div className="mt-6">
+          <GlowButton href="https://www.instagram.com/lunaya.swimm/" variant="secondary">
+            Follow the Build
+          </GlowButton>
         </div>
       </section>
     </>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { GlowButton } from "@/components/ui/GlowButton";
 
-const badges = ["Hand-Applied Crystals", "Brazilian Cuts", "Zodiac Inspired", "Made by Zoe + Lilly"];
+const badges = ["Crystal Details Coming Soon", "Brazilian-Inspired Cuts", "Zodiac Energy", "Made by Zoe + Lilly"];
 
 export function Hero() {
   return (
@@ -19,21 +19,25 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-16 pt-32 text-center sm:px-6 sm:pb-24">
         <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-gold">
-          Limited Drop 001 · Zodiac Heat
+          Coming Soon
         </p>
+        <h1 className="text-gradient-gold font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
+          Lunaya Swim Is Coming.
+        </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-pearl/80 sm:text-lg">
-          Hand-finished crystal swimwear made for your sign, your skin, and your summer alter ego.
+          Crystal-detailed, Brazilian-inspired swimwear designed around sun, skin, signs, and the
+          energy you bring to the water.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <GlowButton href="/shop" variant="primary">
-            Shop the Drop
+          <GlowButton href="/waitlist" variant="primary">
+            Join the Waitlist
           </GlowButton>
-          <GlowButton href="/shop#colors" variant="secondary">
-            Explore Colors
+          <GlowButton href="https://www.instagram.com/lunaya.swimm/" variant="secondary">
+            Follow on Instagram
           </GlowButton>
-          <GlowButton href="/custom-bikinis" variant="secondary">
-            Build Custom
+          <GlowButton href="/moodboard" variant="secondary">
+            Explore the Moodboard
           </GlowButton>
         </div>
 

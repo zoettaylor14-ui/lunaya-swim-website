@@ -3,24 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ShoppingBag, Menu, X, Search } from "lucide-react";
-import { useCart } from "@/lib/cart-context";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PinterestIcon } from "@/components/ui/PinterestIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 const navLinks = [
-  { label: "Shop", href: "/shop" },
-  { label: "New Drop", href: "/new-drop" },
-  { label: "Zodiac Collection", href: "/zodiac-collection" },
-  { label: "Brazilian Cuts", href: "/brazilian-cuts" },
-  { label: "Custom", href: "/custom-bikinis" },
-  { label: "Story", href: "/our-story" },
+  { label: "Home", href: "/" },
+  { label: "The Drop", href: "/drop" },
+  { label: "Color Stories", href: "/color-stories" },
+  { label: "Custom Access", href: "/custom-access" },
+  { label: "Moodboard", href: "/moodboard" },
+  { label: "Story", href: "/story" },
+  { label: "Waitlist", href: "/waitlist" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { openCart, count } = useCart();
 
   return (
     <>
@@ -37,7 +36,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -50,13 +49,6 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/shop"
-              aria-label="Search Lunaya Swim"
-              className="hidden text-pearl/70 transition-colors hover:text-gold sm:block"
-            >
-              <Search size={18} strokeWidth={1.5} />
-            </Link>
             <a
               href="https://www.instagram.com/lunaya.swimm/"
               target="_blank"
@@ -75,23 +67,11 @@ export function Header() {
             >
               <PinterestIcon size={18} />
             </a>
-            <button
-              onClick={openCart}
-              aria-label="Open cart"
-              className="relative text-pearl/70 transition-colors hover:text-gold"
-            >
-              <ShoppingBag size={19} strokeWidth={1.5} />
-              {count > 0 && (
-                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[10px] font-semibold text-midnight">
-                  {count}
-                </span>
-              )}
-            </button>
             <Link
               href="/waitlist"
               className="hidden rounded-full bg-gradient-to-r from-gold to-peach px-4 py-2 text-xs font-medium text-midnight transition hover:brightness-110 md:inline-flex"
             >
-              Join Waitlist
+              Join the Waitlist
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
@@ -159,7 +139,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="block w-full rounded-full bg-gradient-to-r from-gold to-peach px-4 py-3 text-center text-sm font-medium text-midnight"
             >
-              Join Waitlist
+              Join the Waitlist
             </Link>
           </div>
         </div>

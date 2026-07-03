@@ -11,9 +11,9 @@ export function PinterestMoodboard() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
       <SectionHeading
-        eyebrow="Lilly's Moodboard"
-        title="The Energy Behind the First Drop"
-        subtitle="Crystal sparkle, beach goddess styling, and zodiac swimwear inspiration."
+        eyebrow="Moodboard"
+        title="Lilly's Moodboard"
+        subtitle="The visual energy behind Lunaya: tropical heat, crystal details, beach goddess styling, fruit tones, jungle greens, and golden skin."
       />
       <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
         {pinterest.fallbackCards.map((card) => (
@@ -39,7 +39,7 @@ export function PinterestMoodboard() {
       <div className="mt-8 flex justify-center">
         <GlowButton href={pinterest.boardUrl} variant="secondary">
           <PinterestIcon size={16} />
-          View the Pinterest Board
+          View Lilly&apos;s Pinterest Board
         </GlowButton>
       </div>
     </section>

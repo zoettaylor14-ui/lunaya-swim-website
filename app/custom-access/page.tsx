@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { Palette, Gem, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Palette, Gem, Star, Send, CheckCircle2 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CustomRequestForm } from "@/components/CustomRequestForm";
 
 export const metadata: Metadata = {
-  title: "Custom Bikinis | Lunaya Swim",
+  title: "Custom Access | Lunaya Swim",
   description:
-    "Build your own crystal astrology bikini with Zoe + Lilly. Choose your color, crystal energy, and zodiac detail.",
+    "Request early access to a custom crystal bikini from Zoe + Lilly. Choose your shade, crystal energy, and zodiac influence before the full drop launches.",
 };
 
 const steps = [
-  { icon: Palette, title: "Pick Your Base", copy: "Choose your bikini color, top style, and bottom style." },
+  { icon: Palette, title: "Pick Your Shade", copy: "Choose the dream bikini shade and fit direction you're drawn to." },
   { icon: Gem, title: "Choose Your Crystals", copy: "Pick a crystal color and energy that matches your vision." },
-  { icon: MapPin, title: "Choose Your Placement", copy: "Center chest, straps, hip detail, zodiac symbol, or fully custom." },
-  { icon: Send, title: "Submit Your Request", copy: "Tell us your sizing, budget, and timeline." },
-  { icon: CheckCircle2, title: "We Review + Confirm", copy: "Zoe + Lilly review every detail and confirm before we begin." },
+  { icon: Star, title: "Share Your Sign", copy: "Tell us your zodiac sign so we can weave in that energy." },
+  { icon: Send, title: "Submit Your Request", copy: "Tell us your sizing direction, timeline, and any notes." },
+  { icon: CheckCircle2, title: "We Review", copy: "Zoe + Lilly review every request when custom spots open." },
 ];
 
-export default function CustomBikinisPage() {
+export default function CustomAccessPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
       <SectionHeading
-        eyebrow="Custom Available"
-        title="Build Your Crystal Bikini"
-        subtitle="Choose your color, your crystal energy, and your zodiac detail. We'll create a piece that feels like it was made for your summer story."
+        eyebrow="Limited Early Interest"
+        title="Want a custom crystal bikini first?"
+        subtitle="Before the full drop launches, we'll be opening a limited number of custom request spots. Choose your shade, crystal energy, zodiac influence, and fit direction, then we'll review your request when custom spots open."
       />
 
       <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-5">
@@ -37,10 +37,6 @@ export default function CustomBikinisPage() {
             <p className="mt-1 text-[11px] leading-relaxed text-pearl/50">{step.copy}</p>
           </div>
         ))}
-      </div>
-
-      <div className="mt-6 text-center text-sm text-pearl/50">
-        Custom requests start at <span className="text-gold">$150</span>.
       </div>
 
       <div className="mt-14">

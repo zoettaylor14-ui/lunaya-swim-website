@@ -18,7 +18,6 @@ export function ContactForm() {
       name: form.get("name"),
       email: form.get("email"),
       reason,
-      orderNumber: form.get("orderNumber"),
       message: form.get("message"),
     };
     try {
@@ -59,10 +58,6 @@ export function ContactForm() {
       <div>
         <Label required>Reason</Label>
         <ChipGroup options={contactReasons} value={reason} onChange={setReason} />
-      </div>
-      <div>
-        <Label>Order Number (optional)</Label>
-        <Input name="orderNumber" placeholder="LS-0000" />
       </div>
       <div>
         <Label required>Message</Label>

@@ -8,7 +8,8 @@ export async function POST(request: Request) {
   }
 
   // TODO: connect waitlist form to email/SMS provider (Klaviyo/Resend via KLAVIYO_API_KEY / RESEND_API_KEY)
-  // TODO: store waitlist leads in database (waitlist_signups table — see supabase-schema.sql)
+  // TODO: store waitlist leads in database (waitlist_signups table — see supabase-schema.sql;
+  //       add a favorite_shade column alongside the existing interest/zodiac_sign fields)
   console.log("[waitlist] new signup", body);
 
   return NextResponse.json({ ok: true });
