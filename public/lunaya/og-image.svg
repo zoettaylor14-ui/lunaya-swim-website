@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="40%" r="70%"><stop offset="0%" stop-color="#41205E"/><stop offset="50%" stop-color="#0B1024"/><stop offset="100%" stop-color="#05050A"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFF4C7"/><stop offset="50%" stop-color="#D7AF5E"/><stop offset="100%" stop-color="#8E6A2E"/></linearGradient>
+    <linearGradient id="ab" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E7F7FF"/><stop offset="32%" stop-color="#F8C8FF"/><stop offset="60%" stop-color="#B8E7FF"/><stop offset="100%" stop-color="#FFE8B6"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="220" cy="120" r="2" fill="#fff" opacity="0.8"/><circle cx="1025" cy="160" r="2" fill="#fff" opacity="0.7"/><circle cx="1080" cy="500" r="3" fill="#fff" opacity="0.6"/>
+  <g transform="translate(485,72)">
+    <circle cx="115" cy="115" r="88" fill="url(#gold)"/>
+    <circle cx="152" cy="88" r="94" fill="#0B1024"/>
+    <path d="M110 214C147 214 180 195 198 165C184 208 145 238 99 238C44 238 0 194 0 139C0 91 31 52 74 39C46 58 28 90 28 126C28 175 62 214 110 214Z" fill="url(#gold)"/>
+    <path d="M256 174L270 207L304 220L270 233L256 266L242 233L208 220L242 207L256 174Z" fill="url(#ab)"/>
+    <path d="M38 295C130 257 220 257 312 295" stroke="url(#ab)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="600" y="410" text-anchor="middle" fill="url(#gold)" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="118" letter-spacing="18">LUNAYA</text>
+  <text x="600" y="480" text-anchor="middle" fill="#F8ECDC" font-family="Inter, Arial, sans-serif" font-size="32" letter-spacing="18">SWIM</text>
+  <text x="600" y="548" text-anchor="middle" fill="#D9C7E9" font-family="Inter, Arial, sans-serif" font-size="26" letter-spacing="3">CRYSTAL ASTROLOGY SWIMWEAR BY ZOE + LILLY</text>
+</svg>

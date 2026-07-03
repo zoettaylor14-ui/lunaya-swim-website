@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #05050a;
+  --color-navy: #0b1024;
+  --color-plum: #2a1248;
+  --color-gold: #d7af5e;
+  --color-pearl: #f8ecdc;
+  --color-blush: #f8c8ff;
+  --color-crystal: #b8e7ff;
+  --color-silver: #d9d6e5;
+  --color-peach: #ffb49a;
+  --color-emerald: #4bae8c;
+
+  --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+:root {
+  --background: var(--color-midnight);
+  --foreground: var(--color-pearl);
+}
+
+* {
+  border-color: color-mix(in srgb, var(--color-pearl) 12%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  position: relative;
+}
+
+/* grainy moonlit background texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+/* glassy card */
+.glass-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--color-pearl) 8%, transparent),
+    color-mix(in srgb, var(--color-plum) 18%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, var(--color-pearl) 14%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glow-gold {
+  box-shadow: 0 0 40px -10px color-mix(in srgb, var(--color-gold) 55%, transparent);
+}
+
+.glow-crystal {
+  box-shadow: 0 0 40px -12px color-mix(in srgb, var(--color-crystal) 55%, transparent);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, var(--color-gold), var(--color-pearl), var(--color-gold));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    color-mix(in srgb, var(--color-pearl) 25%, transparent) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}
+
+.sparkle-overlay {
+  background-image: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--color-crystal) 70%, transparent) 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(circle, color-mix(in srgb, var(--color-gold) 70%, transparent) 1px, transparent 1.5px);
+  background-size: 90px 90px, 130px 130px;
+  background-position: 0 0, 40px 60px;
+}
+
+::selection {
+  background: var(--color-plum);
+  color: var(--color-pearl);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

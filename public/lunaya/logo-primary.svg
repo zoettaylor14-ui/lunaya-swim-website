@@ -1,0 +1,15 @@
+<svg width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFF4C7"/><stop offset="48%" stop-color="#D7AF5E"/><stop offset="100%" stop-color="#8E6A2E"/></linearGradient>
+    <linearGradient id="ab" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E7F7FF"/><stop offset="28%" stop-color="#F8C8FF"/><stop offset="55%" stop-color="#B8E7FF"/><stop offset="78%" stop-color="#FFE8B6"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient>
+  </defs>
+  <g transform="translate(110,118)">
+    <circle cx="112" cy="112" r="82" fill="url(#gold)" opacity="0.98"/>
+    <circle cx="144" cy="86" r="84" fill="#0B1024"/>
+    <path d="M105 202C139 202 169 185 186 157C172 195 136 224 94 224C42 224 0 182 0 130C0 86 28 49 68 37C42 54 26 84 26 116C26 163 58 202 105 202Z" fill="url(#gold)"/>
+    <path d="M236 160L248 188L276 200L248 212L236 240L224 212L196 200L224 188L236 160Z" fill="url(#ab)"/>
+    <path d="M36 270C119 236 199 236 284 270" stroke="url(#ab)" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  <text x="850" y="258" text-anchor="middle" fill="url(#gold)" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="122" letter-spacing="18">LUNAYA</text>
+  <text x="850" y="338" text-anchor="middle" fill="#F8ECDC" font-family="Inter, Arial, sans-serif" font-size="32" letter-spacing="20">SWIM</text>
+</svg>
