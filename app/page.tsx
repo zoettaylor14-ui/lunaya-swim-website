@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { Hero } from "@/components/Hero";
-import { BrandTeaser } from "@/components/BrandTeaser";
 import { ColorStories } from "@/components/ColorStories";
 import { FirstDropSection } from "@/components/FirstDropSection";
 import { CustomAccessTeaser } from "@/components/CustomAccessTeaser";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <BrandTeaser />
       <ColorStories />
       <FirstDropSection />
       <CustomAccessTeaser />
